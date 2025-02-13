@@ -1,5 +1,5 @@
-const jssConfig = require('./src/temp/config');
-const plugins = require('./src/temp/next-config-plugins') || {};
+const jssConfig = require('src/temp/config');
+const plugins = require('src/temp/next-config-plugins') || {};
 
 const publicUrl = jssConfig.publicUrl;
 
