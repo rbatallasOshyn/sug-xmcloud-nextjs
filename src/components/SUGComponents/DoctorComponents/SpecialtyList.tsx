@@ -41,7 +41,7 @@ export const fetchSpecialtyList = async (language: string) => {
         }
     `;
 
-  const data = await graphQLClient.request(query);
+  const data = await graphQLClient.request<any>(query);
 
   const menuList: SpelcialtyItems = {
     MenuItems: [],
