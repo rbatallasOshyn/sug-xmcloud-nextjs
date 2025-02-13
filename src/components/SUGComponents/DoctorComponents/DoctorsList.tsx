@@ -65,7 +65,7 @@ export const fetchDoctorList = async (language: string) => {
         }
     `;
 
-  const data = await graphQLClient.request(query);
+  const data = await graphQLClient.request<any>(query);
 
   const doctorList: DoctorListItems = {
     Doctors: [],

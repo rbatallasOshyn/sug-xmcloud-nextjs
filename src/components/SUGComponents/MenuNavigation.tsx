@@ -41,7 +41,19 @@ const fetchMenuItems = async (language: string) => {
     }
   `;
 
-  const data = await graphQLClient.request(query);
+  const data = (await graphQLClient.request(query)) as {
+    item: {
+      children: {
+        results: Array<{
+          name: string;
+          id: string;
+          url: {
+            path: string;
+          };
+        }>;
+      };
+    };
+  };
 
   const menuList: NavigationMenu = {
     MenuItems: [],
